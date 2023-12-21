@@ -1,0 +1,3 @@
+(tests
+ (names luv_blend_test)
+ (libraries colors))
