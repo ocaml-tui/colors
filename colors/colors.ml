@@ -1,3 +1,10 @@
+(**
+   The majority of the following code to convert colors between RGB, Linear
+   RGB, XYZ, and LUV, was ported over from the go-colorful library.
+
+   Ref: https://github.com/lucasb-eyer/go-colorful/blob/6e6f2cdd7e293224a813cb9d5411a81ca5eb3029/colors.go
+*)
+
 type ansi = [ `ansi of int ]
 type rgb = [ `rgb of int * int * int ]
 type lrgb = [ `lrgb of float * float * float ]

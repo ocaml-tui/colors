@@ -17,6 +17,8 @@
 (package
  (name colors)
  (synopsis "A pure OCaml library for manipulating colors across color spaces")
- (depends (ocaml (>= "4.08.0")))
+ (depends 
+   (ocaml (>= "4.13.0"))
+   (mdx (and :with-test (>= "2.3.1"))))
  (tags
   (color "color spaces" "color transformations" "color blending" luv xyz rgb "linear rgb" srgb uv "reference colors")))

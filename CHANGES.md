@@ -1,6 +1,6 @@
 # Changes
 
-## Unreleased
+## 0.0.1
 
 * Introduce RGB, XYZ, LUV, UV types
 * Include standard white reference point `d65`
