@@ -9,7 +9,7 @@ type color = [ ansi | rgb | xyz | luv | uv ]
 val pp : Format.formatter -> color -> unit
 
 module ANSI : sig
-  val to_rgb : ansi -> int * int * int
+  val to_rgb : ansi -> rgb
 end
 
 module White_reference : sig
