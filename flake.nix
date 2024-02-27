@@ -13,26 +13,26 @@
           name = "colors";
           version = "0.0.1";
         in
-        {
-          devShells = {
-            default = mkShell {
-	      buildInputs = [ ocamlPackages.utop ];
-              inputsFrom = [ self'.packages.default ];
+          {
+            devShells = {
+              default = mkShell {
+                buildInputs = [ ocamlPackages.utop ];
+                inputsFrom = [ self'.packages.default ];
+              };
+            };
+
+            packages = {
+              default = buildDunePackage {
+                inherit version;
+                pname = name;
+                propagatedBuildInputs = with ocamlPackages; [
+                  (mdx.override {
+                    inherit logs;
+                  })
+                ];
+                src = ./.;
+              };
             };
           };
-
-          packages = {
-            default = buildDunePackage {
-              inherit version;
-              pname = name;
-	      propagatedBuildInputs = with ocamlPackages; [
-            	(mdx.override {
-              	  inherit logs;
-            	})
-	      ];
-              src = ./.;
-            };
-	  };
-        };
     };
 }
