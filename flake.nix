@@ -1,5 +1,5 @@
 {
-  description = "Example kickstart OCaml application project.";
+  description = "A pure OCaml library for manipulating colors in different color spaces";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
